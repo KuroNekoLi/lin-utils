@@ -1,17 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    `maven-publish`
+    id("maven-publish")
 }
-afterEvaluate{
-    android.libraryVariants.forEach {
-        publishing.publications.create(it.name, MavenPublication::class) {
-            groupId = "com.linli.superutils"
-            artifactId = "lin-utils"
-            version = "1.0.4"
-        }
-    }
-}
+
 android {
     namespace = "com.linli.superutils"
     compileSdk = 34
@@ -42,11 +34,19 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+afterEvaluate{
+    android.libraryVariants.forEach {
+        publishing.publications.create(it.name, MavenPublication::class) {
+            groupId = "com.linli.superutils"
+            artifactId = "lin-utils"
+            version = "1.0.5"
+        }
+    }
 }

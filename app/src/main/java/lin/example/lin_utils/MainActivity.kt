@@ -11,10 +11,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.linli.superutils.*
 import lin.example.lin_utils.ui.theme.LinutilsTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Test()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
