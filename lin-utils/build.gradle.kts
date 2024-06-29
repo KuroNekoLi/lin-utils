@@ -8,7 +8,7 @@ afterEvaluate{
         publishing.publications.create(it.name, MavenPublication::class) {
             groupId = "com.linli.superutils"
             artifactId = "lin-utils"
-            version = "1.0.0"
+            version = "1.0.4"
         }
     }
 }
