@@ -25,11 +25,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
 }
 
@@ -44,9 +44,9 @@ dependencies {
 afterEvaluate{
     android.libraryVariants.forEach {
         publishing.publications.create(it.name, MavenPublication::class) {
-            groupId = "com.linli.superutils"
+            groupId = "com.github.KuroNekoLi"
             artifactId = "lin-utils"
-            version = "1.0.5"
+            version = "1.0.6"
         }
     }
 }
