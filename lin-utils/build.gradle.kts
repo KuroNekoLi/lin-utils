@@ -41,12 +41,12 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-//afterEvaluate{
-//    android.libraryVariants.forEach {
-//        publishing.publications.create(it.name, MavenPublication::class) {
-//            groupId = "com.github.KuroNekoLi"
-//            artifactId = "lin-utils"
-//            version = "1.0.6"
-//        }
-//    }
-//}
+afterEvaluate{
+    android.libraryVariants.forEach {
+        publishing.publications.create(it.name, MavenPublication::class) {
+            groupId = "com.github.KuroNekoLi"
+            artifactId = "lin-utils"
+            version = "1.0.9"
+        }
+    }
+}
